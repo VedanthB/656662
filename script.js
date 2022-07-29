@@ -28,7 +28,9 @@ axios(url)
 
     $(".page").each((i, el) => {
 
-      const htmlContent = `<html> \n <head>${head}</head> \n  <body> ${$(el).html()}  </body>  </html>` 
+      const htmlContent = `<html> \n <head> \n ${head} \n </head> \n  <body> \n   <div id="container-wrap">  \n  <div id="container "> \n <div class="pages paper-vertical"> \n <li class="page" >${$(el).html()} </li> </div>  </div> </div
+      
+          \n  </body> \n </html>` 
 
       fs.writeFile(`${i}.html`,htmlContent, function(err) {
         if(err) {
